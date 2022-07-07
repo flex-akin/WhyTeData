@@ -42,7 +42,7 @@
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
-            emailjs.init('94XaFncXSZUjN4VPY');
+            emailjs.init('94XaFncXSZUjN4VP');
         })();
     </script>
     <script type="text/javascript">
@@ -55,9 +55,11 @@
                 emailjs.sendForm('contact_service', 'contact_form', this)
                     .then(function() {
                         console.log('SUCCESS!');
+                        alert("Massage Sent")
                         
                     }, function(error) {
                         console.log('FAILED...', error);
+                        alert("Message sending Failed")
                     });
             });
         }
