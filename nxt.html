@@ -85,69 +85,49 @@
           <div data-aos="fade-up" data-aos-delay="100">
             <article id="article-way">
 
-                <p><strong> FACC$X™ </strong>is our <strong>TOP SECRET BANK,</strong> where we learn to understand the needs of those who matter in our <strong> workplace and business environments</strong>. The essence is to use what <strong>WE GAIN</strong> to boost our  <strong>PRODUCTIVITY, PERFROMANCE</strong> and<strong> PROFIT. </strong></p>
-                <p>
-            Welcome to <strong>FACC$X</strong>, the <strong>F</strong>aculty of <strong>A</strong>dvanced <strong>C</strong>lients, <strong>C</strong>ustomers, and <strong>$</strong>TAFF <strong>X</strong>perience. 
-
-                </p>
-                <p>
-                  “The type and amount of Currency you earn depends on you and your $taffs – not on your
-                  Clients and Customers. Your Clients (your professional customers) and Customers pay your
-                  currency while you determine the type ($, £, €, ¥, Naira) and amount of currency they will pay
-                  simply by paying HUGE ATTENTION to your $taffs”
-
-                </p>
-                <p>
-            <strong>Introducing the Card & Currency Course – A new perspective to business practice   </strong>    <br/>
-            </p>
-            <p>
-            <strong>Food for thought</strong> <br>
-            <strong>“#Excitingemployeeengagement</strong> 
-            is creating a culture of unending Joy for every <strong>
-            $TAFF at their workplaces. $TAFF Xperience determines companies’ cash and currency, not clients and customers. A burnout $TAFF can ruin your clients’ relationship with you and cost you billions. Look after your $TAFFS, for they are your most precious Workplace assets, your money makers, your Workforces, and your FORCE for good” 
-
-            </strong>
-            <p>
-              Enjoy the moment and please answer the question below to continue
-            </p>
-            <p> 
-              <strong> Hint: Start</strong> the ‘BransonVirgin way’ – “Listen to yourself and others around you; Learn as you
-              practice these two exercises; Laugh with yourself and others, and Lead yourself first. <strong>Continue</strong> the
-              ‘BillMicrosoft way’ – “Learn to do Business @ the Speed of Thought”
-            </p>
-            <p>Remember, “If it’s not fun, it’s not worth doing” – Richard Branson. <br>
-              So please get excited as you get engaged.
-            </p>
-            
-                <p> <strong>Question - </strong>
-
-                  Get your VISA, MasterCard and American Express cards if you have them and get the
-                  image of the one you don’t have online. Observe the cards and rearrange these numbers
-                  accordingly (5, 3, 4) where V = Visa Card, M = MasterCard & A = American Express.
-
-            
-            </p>
-          
-            <p>Remember this – “If it’s not fun, it’s not worth doing” – Richard Branson. So discover something to get excited about at the early stage of this course. </p> 
-            <strong>Pick one of the options below to answer question 1 </strong>
-            <p> 
-              <form action="">
-              <input type="radio" id="html" name="fav_language" value="M = 4, A = 5, V = 3">
-            <label for="html">M = 4, A = 5, V = 3 </label><br>
-            <input type="radio" id="css" name="fav_language" value="V = 5, M = 3, A = 4">
-            <label for="css">V = 5, M = 3, A = 4</label><br>
-            <input type="radio" id="javascript" name="fav_language" value="A = 3, V = 4, M = 5">
-            <label for="javascript">A = 3, V = 4, M = 5</label> <br>
-            <input type="submit" onclick='show()' style="padding: 7px; margin: 10px; border: 0px ; background-color:red; color: white;">
-            </p>
-            <div id="log"></div>
-
-         
+               
           
       
           </form>
 
- 
+          <div id="show">
+            <form action="">
+                <p> <strong>Choose the right digit for each card as stated below.</strong></p>
+                <p>MasterCard </p>
+              <input type="radio" id="html" name="fav_language" value="4">
+              <label for="html">4 </label><br>
+              <input type="radio" id="css" name="fav_language" value="5">
+              <label for="css">5</label><br>
+              <input type="radio" id="javascript" name="fav_language" value="3">
+              <label for="javascript">3</label> <br>
+              <br>
+
+                <p>American Express </p>
+              <input type="radio" id="html" name="fav1_language" value="5">
+              <label for="html">5</label><br>
+              <input type="radio" id="css" name="fav1_language" value="4">
+              <label for="css">4</label><br>
+              <input type="radio" id="javascript" name="fav1_language" value="3">
+              <label for="javascript">3</label> <br>
+              <br>
+                <p>Visa Card </p>
+              <input type="radio" id="html" name="fav2_language" value="3">
+              <label for="html">3 </label><br>
+              <input type="radio" id="css" name="fav2_language" value="5">
+              <label for="css">5</label><br>
+              <input type="radio" id="javascript" name="fav2_language" value="4">
+              <label for="javascript">4</label> <br>
+              <input type="submit" style="padding: 7px; margin: 10px; border: 0px ; background-color:red; color: white;">
+              
+              <div id="log"></div>
+
+
+            </form>
+          </div>
+           
+            
+          <a href="cardcur.html">card and currency</a>
+            
             
             
             
@@ -221,8 +201,8 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Complete Workplace & Business Innovation.</h4>
-            <p>We are a Workplace and Business Innovation Company. We are committed to trading business secrets for operational excellence and business transformations. </p>
-            
+              <p>We are a Workplace and Business Innovation Company. We are committed to trading business secrets for operational excellence and business transformations. </p>
+
             <a href="register.html" class="get-started-btn scrollto">Register</a>
             </form>
 
@@ -269,16 +249,24 @@
  
  form.addEventListener("submit", function(event) {
    var data = new FormData(form);
-   var output = "";
+   var output = [];
    
    for (const entry of data) {
-    
-     output = entry[1];
+    console.log(entry)
+     output.push(entry[1]);
    };
    console.log(output)
- if (output == "A = 3, V = 4, M = 5"){
+   const array1 = [...output]
+   const array2 = ['5', '3', '4'] 
+   
+
+   var is_same = (array1.length == array2.length) && array1.every(function(element, index) {
+    return element === array2[index]; 
+   })
+ if (is_same){
   
-  log.innerHTML = "<span style='font-size:20px; color:green; font-weight:900;'> <i class='bx bx-check'></i> Correct</span>   <button style='padding: 7px; margin: 10px; border: 0px; background-color:green; color: white; onclick='show()'  > <a href='nxt.html'> Proceed </a> </button> "
+  log.innerHTML = "<span style='font-size:20px; color:green; font-weight:900;'> <i class='bx bx-check'></i> Correct</span>   <button style='padding: 7px; margin: 10px; border: 0px; background-color:green; color: white; onclick='show()'  > <a href='cardcur.html'> Proceed </a> </button> "
+  
   
  } else{
   log.innerHTML = "<span style='font-size:20px; color:red; font-weight:900;'> <i class='bx bx-x'></i> Wrong</span>";
@@ -287,15 +275,9 @@
  }, false); 
      
    </script>
-<script>
-  function show() {
-  document.getElementById('log').style.display = 'hidden'
-    
-  }
-  </script>
 
 
 </body>
 
 
-      
+</html>
