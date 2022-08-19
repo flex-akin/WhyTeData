@@ -63,7 +63,11 @@ app.post("/blogPost", async (req,res) => {
 })
 
 
+app.get("/blogContent", async (req,res) => {
+    const blogPost = await Blog.findAll();
+    res.render("pages/allPosts", {blogPost} )
 
+})
 
 app.set('view engine', 'ejs');
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
@@ -78,6 +82,7 @@ app.get('/register', (req, res) => {
 app.get('/admin', (req, res) => {
     res.render('pages/admin')
 })
+
 
 
 
