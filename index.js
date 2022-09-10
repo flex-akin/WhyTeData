@@ -83,6 +83,15 @@ app.get('/admin', (req, res) => {
     res.render('pages/admin')
 })
 
+app.get('/show/:id', async (req, res) => {
+    const uid = req.params.id
+    const article = await Blog.findOne({ where: { id: uid } });
+
+    res.send(article)
+
+
+})
+
 
 
 

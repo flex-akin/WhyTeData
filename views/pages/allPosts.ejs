@@ -89,11 +89,14 @@
             <div id="post" class="col-lg-3 col-md-6 col-xs-1 d-flex flex-column">
                 <div class="imgwrap d-flex justify-content-center">
                     <img src="assets/img/portfolio/wasbit.jpeg" class="img-fluid" alt="Responsive image">
+                    
+                  <div><a style="color: black;" href="http://localhost:3302/show/<%= post.Id %> " >READ MORE</a></div>
+                    
                 </div>
                <div class="info d-flex flex-column">
+                
                 <h3><%= post.Topic %> </h3>
-                <div id="felix">
-                   
+                <div id="felix">                   
                     <p><%= post.Snippet %> ...</p>
                 <p><strong>Author</strong> <%= post.Author %> </p>
                 </div>
